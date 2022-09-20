@@ -39,11 +39,6 @@ class PopulatedClubSerializer(ClubSerializer):
 class PopulatedTrainerSerializer(TrainerSerializer):
     club = ClubSerializer()
 
-class PopulatedWorkshopSerializer(WorkshopSerializer):
-    trainers = TrainerSerializer(many=True)
-    # experience_level = ExperienceSeralizer(many=True)
-    class Meta:
-        model = Workshop
-        fields = ('id', 'name', 'trainers' )
+
 
 
