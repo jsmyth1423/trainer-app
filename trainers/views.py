@@ -31,5 +31,4 @@ class ClubList(ListCreateAPIView):
     queryset = Club.objects.all()
     serializer_class = PopulatedClubSerializer
     filter_backends = [filters.SearchFilter]
-    search_fields = ['name']
-    # search by last trained
+    search_fields = ['name', 'trainers__last_trained']
