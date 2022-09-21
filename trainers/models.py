@@ -1,7 +1,5 @@
-from unicodedata import name
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
-from django import forms
 
 company_role_choices = [
     ("1", "Product Developer"),
@@ -42,7 +40,7 @@ class Workshop(models.Model):
 
 
 class Workshop_Details(models.Model):
-    name = models.CharField(max_length=50)
+    workshop_name = models.CharField(max_length=50)
     trainer = models.ForeignKey(Trainer, on_delete=models.CASCADE)
     workshop = models.ForeignKey(Workshop, on_delete=models.CASCADE)
     experience_level = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])

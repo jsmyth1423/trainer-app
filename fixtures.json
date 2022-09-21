@@ -45,7 +45,7 @@
   "fields": {
     "name": "Jordan Smyth",
     "club": 2,
-    "last_trained": "2022-09-20",
+    "last_trained": "2022-09-01",
     "email": "jordan@and.digital",
     "ANDi_level": 1,
     "company_role": "Product Developer"
@@ -63,6 +63,13 @@
   "pk": 2,
   "fields": {
     "name": "SCRUM"
+  }
+},
+{
+  "model": "trainers.workshop",
+  "pk": 3,
+  "fields": {
+    "name": "PD Fundamentals"
   }
 },
 {
@@ -93,6 +100,16 @@
     "trainer": 2,
     "workshop": 2,
     "experience_level": 5
+  }
+},
+{
+  "model": "trainers.workshop_details",
+  "pk": 4,
+  "fields": {
+    "name": "PD Fundamentals",
+    "trainer": 2,
+    "workshop": 3,
+    "experience_level": 4
   }
 }
 ]

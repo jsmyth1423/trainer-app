@@ -24,7 +24,7 @@ class Workshop_DetailsSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Workshop_Details
-        fields = ('id', 'name', 'trainer', 'experience_level',)
+        fields = ('id', 'workshop_name','experience_level','trainer', )
         depth = 2
 
 
