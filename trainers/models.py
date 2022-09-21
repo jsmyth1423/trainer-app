@@ -1,6 +1,7 @@
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 
+#! Choice Arrays for dropdown selectors
 company_role_choices = [
     ("Product Developer", "Product Developer"),
     ("Product Analyst", "Product Analyst"),

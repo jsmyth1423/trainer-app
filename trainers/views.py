@@ -3,9 +3,6 @@ from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIV
 from trainers.serializers.common import PopulatedClubSerializer, TrainerSerializer, PopulatedTrainerSerializer, Workshop_DetailsSerializer 
 from rest_framework import filters
 
-
-
-
 from .models import *
 # Create your views here.
 
@@ -26,9 +23,8 @@ class WorkshopList(ListCreateAPIView):
     queryset = Workshop_Details.objects.all()
     serializer_class = Workshop_DetailsSerializer
     filter_backends = [filters.SearchFilter, filters.OrderingFilter]
-    search_fields = ['workshop_name', 'experience_level', 'trainer__company_role', '=trainer__name']
+    search_fields = ['workshop_name', 'experience_level', 'trainer__company_role', 'trainer__name']
     ordering_fields = ['experience_level', 'trainer__ANDi_level']
-
 
 
 #! List of all Clubs with nested trainers
@@ -36,5 +32,5 @@ class ClubList(ListCreateAPIView):
     queryset = Club.objects.all()
     serializer_class = PopulatedClubSerializer
     filter_backends = [filters.SearchFilter, filters.OrderingFilter]
-    search_fields = ['name', 'trainers__last_trained']
+    search_fields = ['name', 'trainers__last_trained', 'trainers__name']
     ordering_fields = ['trainers__last_trained']
