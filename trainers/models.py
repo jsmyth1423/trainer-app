@@ -2,12 +2,20 @@ from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 
 company_role_choices = [
-    ("1", "Product Developer"),
-    ("2", "Product Analyst"),
-    ("3", "Squad Lead"),
-    ("4", "Cloud Engineer"),
-    ("5", "Onboarding Coordinator"),
+    ("Product Developer", "Product Developer"),
+    ("Product Analyst", "Product Analyst"),
+    ("Squad Lead", "Squad Lead"),
+    ("Cloud Engineer", "Cloud Engineer"),
+    ("Onboarding Coordinator", "Onboarding Coordinator"),
+]
 
+experience_level = [
+    ("0 - No experience", "0 - No experience"),
+    ("1 - Shadowing", "1 - Shadowing"),
+    ("2 - Co-run a workshop", "2 - Co-run a workshop"),
+    ("3 - Lead a workshop with support", "3 - Lead a workshop with support"),
+    ("4 - Lead workshop independently", "4 - Lead workshop independently"),
+    ("5 - Trains others to run workshops", "5 - Trains others to run workshops")
 ]
 
 # Create your models here.
@@ -43,7 +51,7 @@ class Workshop_Details(models.Model):
     workshop_name = models.CharField(max_length=50)
     trainer = models.ForeignKey(Trainer, on_delete=models.CASCADE)
     workshop = models.ForeignKey(Workshop, on_delete=models.CASCADE)
-    experience_level = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
+    experience_level = models.CharField(choices = experience_level, max_length=50)
     
     class Meta:
         verbose_name_plural = 'Workshop_Details'

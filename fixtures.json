@@ -3,25 +3,37 @@
   "model": "trainers.club",
   "pk": 1,
   "fields": {
-    "name": "Tenzing",
-    "location": "Covent Garden"
+    "name": "Hamilton",
+    "location": "Farringdon"
   }
 },
 {
   "model": "trainers.club",
   "pk": 2,
   "fields": {
-    "name": "Hamilton",
-    "location": "Farringdon"
+    "name": "Tenzing",
+    "location": "Covent Garden"
   }
 },
 {
   "model": "trainers.trainer",
   "pk": 1,
   "fields": {
-    "name": "Lara Howard",
+    "name": "Jordan Smyth",
     "club": 1,
-    "last_trained": "2022-09-20",
+    "last_trained": "2022-09-21",
+    "email": "jordan@and.digital",
+    "ANDi_level": 3,
+    "company_role": "Product Developer"
+  }
+},
+{
+  "model": "trainers.trainer",
+  "pk": 2,
+  "fields": {
+    "name": "Lara Howard",
+    "club": 2,
+    "last_trained": "2022-09-21",
     "email": "lara@and.digital",
     "ANDi_level": 3,
     "company_role": "Onboarding Coordinator"
@@ -29,25 +41,13 @@
 },
 {
   "model": "trainers.trainer",
-  "pk": 2,
-  "fields": {
-    "name": "Chris",
-    "club": 1,
-    "last_trained": "2022-09-20",
-    "email": "chris@and.digital",
-    "ANDi_level": 4,
-    "company_role": "Product Developer"
-  }
-},
-{
-  "model": "trainers.trainer",
   "pk": 3,
   "fields": {
-    "name": "Jordan Smyth",
+    "name": "Chris",
     "club": 2,
-    "last_trained": "2022-09-01",
-    "email": "jordan@and.digital",
-    "ANDi_level": 1,
+    "last_trained": "2022-09-21",
+    "email": "chris@and.digital",
+    "ANDi_level": 5,
     "company_role": "Product Developer"
   }
 },
@@ -62,54 +62,44 @@
   "model": "trainers.workshop",
   "pk": 2,
   "fields": {
-    "name": "SCRUM"
+    "name": "Psychological Safety"
   }
 },
 {
   "model": "trainers.workshop",
   "pk": 3,
   "fields": {
-    "name": "PD Fundamentals"
+    "name": "SCRUM"
   }
 },
 {
   "model": "trainers.workshop_details",
   "pk": 1,
   "fields": {
-    "name": "HBDI",
-    "trainer": 1,
+    "workshop_name": "HBDI",
+    "trainer": 2,
     "workshop": 1,
-    "experience_level": 3
+    "experience_level": "4 - Lead workshop independently"
   }
 },
 {
   "model": "trainers.workshop_details",
   "pk": 2,
   "fields": {
-    "name": "HBDI",
+    "workshop_name": "Psychological Safety",
     "trainer": 2,
-    "workshop": 1,
-    "experience_level": 5
+    "workshop": 2,
+    "experience_level": "4 - Lead workshop independently"
   }
 },
 {
   "model": "trainers.workshop_details",
   "pk": 3,
   "fields": {
-    "name": "SCRUM",
-    "trainer": 2,
-    "workshop": 2,
-    "experience_level": 5
-  }
-},
-{
-  "model": "trainers.workshop_details",
-  "pk": 4,
-  "fields": {
-    "name": "PD Fundamentals",
-    "trainer": 2,
+    "workshop_name": "SCRUM",
+    "trainer": 3,
     "workshop": 3,
-    "experience_level": 4
+    "experience_level": "5 - Trains others to run workshops"
   }
 }
 ]
