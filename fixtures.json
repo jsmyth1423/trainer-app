@@ -3,7 +3,7 @@
   "model": "trainers.club",
   "pk": 1,
   "fields": {
-    "name": "Hamilton",
+    "name": "Club Hamilton",
     "location": "Farringdon"
   }
 },
@@ -11,7 +11,71 @@
   "model": "trainers.club",
   "pk": 2,
   "fields": {
-    "name": "Tenzing",
+    "name": "Tenzing London",
+    "location": "Covent Garden"
+  }
+},
+{
+  "model": "trainers.club",
+  "pk": 3,
+  "fields": {
+    "name": "Club Ada",
+    "location": "Bloomsbury"
+  }
+},
+{
+  "model": "trainers.club",
+  "pk": 4,
+  "fields": {
+    "name": "Club Dekker",
+    "location": "Farringdon"
+  }
+},
+{
+  "model": "trainers.club",
+  "pk": 5,
+  "fields": {
+    "name": "Club Turing",
+    "location": "Covent Garden"
+  }
+},
+{
+  "model": "trainers.club",
+  "pk": 6,
+  "fields": {
+    "name": "Club Gladys",
+    "location": "Holborn"
+  }
+},
+{
+  "model": "trainers.club",
+  "pk": 7,
+  "fields": {
+    "name": "Club Cloud",
+    "location": "Southwark"
+  }
+},
+{
+  "model": "trainers.club",
+  "pk": 8,
+  "fields": {
+    "name": "Club London 5",
+    "location": "Holborn"
+  }
+},
+{
+  "model": "trainers.club",
+  "pk": 9,
+  "fields": {
+    "name": "Consulting",
+    "location": "Covent Garden"
+  }
+},
+{
+  "model": "trainers.club",
+  "pk": 10,
+  "fields": {
+    "name": "Global Functions",
     "location": "Covent Garden"
   }
 },
@@ -21,10 +85,11 @@
   "fields": {
     "name": "Jordan Smyth",
     "club": 1,
-    "last_trained": "2022-09-21",
+    "last_trained": "2022-09-07",
     "email": "jordan@and.digital",
-    "ANDi_level": 3,
-    "company_role": "Product Developer"
+    "ANDi_level": 1,
+    "company_role": "Product Developer",
+    "img": "https://ca.slack-edge.com/E0268G5LYLC-U03TAG6U9GC-cd65fe0b853e-512"
   }
 },
 {
@@ -33,22 +98,115 @@
   "fields": {
     "name": "Lara Howard",
     "club": 2,
-    "last_trained": "2022-09-21",
+    "last_trained": "2022-09-07",
     "email": "lara@and.digital",
     "ANDi_level": 3,
-    "company_role": "Onboarding Coordinator"
+    "company_role": "Onboarding Coordinator",
+    "img": "https://ca.slack-edge.com/E0268G5LYLC-U02QZK87DJB-0b9e64831c37-512"
   }
 },
 {
   "model": "trainers.trainer",
   "pk": 3,
   "fields": {
-    "name": "Chris",
-    "club": 2,
-    "last_trained": "2022-09-21",
+    "name": "Chris Alderson",
+    "club": 9,
+    "last_trained": "2022-09-22",
     "email": "chris@and.digital",
     "ANDi_level": 5,
-    "company_role": "Product Developer"
+    "company_role": "Principal Consultant",
+    "img": "https://ca.slack-edge.com/E0268G5LYLC-U1WB0PHQC-0d077b554cd2-512"
+  }
+},
+{
+  "model": "trainers.trainer",
+  "pk": 4,
+  "fields": {
+    "name": "Bolu Olubajo",
+    "club": 3,
+    "last_trained": "2022-09-01",
+    "email": "bolu@and.digital",
+    "ANDi_level": 2,
+    "company_role": "Product Developer",
+    "img": "https://ca.slack-edge.com/E0268G5LYLC-UUSVB7SLX-2a6f8349e158-512"
+  }
+},
+{
+  "model": "trainers.trainer",
+  "pk": 5,
+  "fields": {
+    "name": "Angeline Raja",
+    "club": 3,
+    "last_trained": "2022-09-04",
+    "email": "angeline@and.digital",
+    "ANDi_level": 3,
+    "company_role": "Product Analyst",
+    "img": "https://ca.slack-edge.com/E0268G5LYLC-U027P0BP92Q-2eccb68dc5ee-512"
+  }
+},
+{
+  "model": "trainers.trainer",
+  "pk": 6,
+  "fields": {
+    "name": "Barry Conner",
+    "club": 3,
+    "last_trained": "2022-09-22",
+    "email": "barry@and.digital",
+    "ANDi_level": 6,
+    "company_role": "Squad Lead",
+    "img": "https://ca.slack-edge.com/E0268G5LYLC-UH8GM2T25-94bea143cf33-512"
+  }
+},
+{
+  "model": "trainers.trainer",
+  "pk": 7,
+  "fields": {
+    "name": "Kully Jethwa",
+    "club": 3,
+    "last_trained": "2022-09-08",
+    "email": "kully@and.digital",
+    "ANDi_level": 4,
+    "company_role": "Product Analyst",
+    "img": "https://ca.slack-edge.com/E0268G5LYLC-UB16ATQKX-272943058345-512"
+  }
+},
+{
+  "model": "trainers.trainer",
+  "pk": 8,
+  "fields": {
+    "name": "Andy Davison",
+    "club": 6,
+    "last_trained": "2022-09-22",
+    "email": "andy@and.digital",
+    "ANDi_level": 5,
+    "company_role": "Product Developer",
+    "img": "https://ca.slack-edge.com/E0268G5LYLC-U1WBRHVMG-cfe4fd1d8c0a-512"
+  }
+},
+{
+  "model": "trainers.trainer",
+  "pk": 9,
+  "fields": {
+    "name": "Paul Morgan",
+    "club": 3,
+    "last_trained": "2022-09-22",
+    "email": "paul@and.digital",
+    "ANDi_level": 5,
+    "company_role": "Product Developer",
+    "img": "https://ca.slack-edge.com/E0268G5LYLC-UM2AFM7RN-a39b6adcd8b4-512"
+  }
+},
+{
+  "model": "trainers.trainer",
+  "pk": 10,
+  "fields": {
+    "name": "Alex White",
+    "club": 5,
+    "last_trained": "2022-09-22",
+    "email": "alex@and.digital",
+    "ANDi_level": 3,
+    "company_role": "Product Developer",
+    "img": "https://ca.slack-edge.com/E0268G5LYLC-U01M7PAM3EC-0274e8da935b-512"
   }
 },
 {
@@ -70,6 +228,55 @@
   "pk": 3,
   "fields": {
     "name": "SCRUM"
+  }
+},
+{
+  "model": "trainers.workshop",
+  "pk": 4,
+  "fields": {
+    "name": "PD Fundamentals"
+  }
+},
+{
+  "model": "trainers.workshop",
+  "pk": 5,
+  "fields": {
+    "name": "PA Fundamentals"
+  }
+},
+{
+  "model": "trainers.workshop",
+  "pk": 6,
+  "fields": {
+    "name": "Client Fundamentals"
+  }
+},
+{
+  "model": "trainers.workshop",
+  "pk": 7,
+  "fields": {
+    "name": "Cultures & Values"
+  }
+},
+{
+  "model": "trainers.workshop",
+  "pk": 8,
+  "fields": {
+    "name": "Feedback & Ambiguity"
+  }
+},
+{
+  "model": "trainers.workshop",
+  "pk": 9,
+  "fields": {
+    "name": "Backlog Building 101"
+  }
+},
+{
+  "model": "trainers.workshop",
+  "pk": 10,
+  "fields": {
+    "name": "Sprint Planning"
   }
 },
 {
@@ -100,6 +307,36 @@
     "trainer": 3,
     "workshop": 3,
     "experience_level": "5 - Trains others to run workshops"
+  }
+},
+{
+  "model": "trainers.workshop_details",
+  "pk": 5,
+  "fields": {
+    "workshop_name": "Feedback & Ambiguity",
+    "trainer": 2,
+    "workshop": 8,
+    "experience_level": "4 - Lead workshop independently"
+  }
+},
+{
+  "model": "trainers.workshop_details",
+  "pk": 6,
+  "fields": {
+    "workshop_name": "PA Fundamentals",
+    "trainer": 5,
+    "workshop": 5,
+    "experience_level": "3 - Lead a workshop with support"
+  }
+},
+{
+  "model": "trainers.workshop_details",
+  "pk": 7,
+  "fields": {
+    "workshop_name": "SCRUM",
+    "trainer": 1,
+    "workshop": 3,
+    "experience_level": "1 - Shadowing"
   }
 }
 ]

@@ -14,6 +14,14 @@ class TrainerList(ListCreateAPIView):
     search_fields = ['name', 'company_role', 'club__name' ]
     ordering_fields = ['last_trained']
 
+class AlphabeticalTrainerList(ListCreateAPIView):
+    queryset = Trainer.objects.all()
+    serializer_class = TrainerSerializer
+    filter_backends = [filters.OrderingFilter]
+    search_fields = ['name', 'company_role', 'club__name' ]
+    ordering_fields = ['name']
+    ordering = ['name']
+
 #! Pre-determined ordering for last_trained to allow search simultaneously
 class LastTrainedDescendingTrainerList(ListCreateAPIView):
     queryset = Trainer.objects.all()
@@ -44,7 +52,6 @@ class WorkshopList(ListCreateAPIView):
     filter_backends = [filters.SearchFilter, filters.OrderingFilter]
     search_fields = ['workshop_name', 'experience_level', 'trainer__company_role', 'trainer__name']
     ordering_fields = ['experience_level']
-    ordering = ['-experience_level']
 
 
 #! Specific views for pre-determined ordering while allowing searches

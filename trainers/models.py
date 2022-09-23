@@ -8,6 +8,7 @@ company_role_choices = [
     ("Squad Lead", "Squad Lead"),
     ("Cloud Engineer", "Cloud Engineer"),
     ("Onboarding Coordinator", "Onboarding Coordinator"),
+    ("Principal Consultant", "Principal Consultant")
 ]
 
 experience_level = [
@@ -35,6 +36,7 @@ class Trainer(models.Model):
     email = models.EmailField()
     ANDi_level = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(6)])
     company_role = models.CharField(choices = company_role_choices, max_length=50)
+    img = models.CharField(max_length=200, blank=True, null=True)
 
     def __str__(self):
         return f'{self.name} - {self.club} - {self.last_trained}'
