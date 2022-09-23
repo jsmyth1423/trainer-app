@@ -8,6 +8,7 @@ urlpatterns = [
     path('list-trained-desc', LastTrainedDescendingTrainerList.as_view()),
     path('list-trained-asc', LastTrainedAscendingTrainerList.as_view()),
     path('<int:pk>/', TrainerDetail.as_view()),
+    path('workshop-names', WorkshopNames.as_view()),
     path('workshop-list', WorkshopList.as_view()),
     path('workshop-list-exp-desc', ExpDescendingWorkshopList.as_view()),
     path('workshop-list-exp-asc', ExpAscendingWorkshopList.as_view()),

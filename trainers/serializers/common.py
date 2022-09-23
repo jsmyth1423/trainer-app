@@ -14,8 +14,15 @@ class TrainerSerializer(serializers.ModelSerializer):
         fields = ('__all__')
         depth = 1
 
-class WorkshopSerializer(serializers.ModelSerializer):
+class SmallTrainerSerializer(serializers.ModelSerializer):
 
+    class Meta:
+        model = Trainer
+        fields = ('name', 'company_role')
+        depth = 1
+
+class WorkshopSerializer(serializers.ModelSerializer):
+    
     class Meta:
         model = Workshop
         fields = ('__all__')
@@ -38,6 +45,13 @@ class PopulatedClubSerializer(ClubSerializer):
 
 class PopulatedTrainerSerializer(TrainerSerializer):
     club = ClubSerializer()
+
+class PopulatedWorkshopSerializer(WorkshopSerializer):
+    trainers = SmallTrainerSerializer(many=True)
+
+    class Meta:
+        model = Workshop
+        fields = ('id', 'name', 'trainers')
 
 
 

@@ -1,6 +1,6 @@
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView # Generic classes for CRUD operations
 
-from trainers.serializers.common import PopulatedClubSerializer, TrainerSerializer, PopulatedTrainerSerializer, Workshop_DetailsSerializer 
+from trainers.serializers.common import PopulatedClubSerializer, PopulatedWorkshopSerializer, TrainerSerializer, PopulatedTrainerSerializer, Workshop_DetailsSerializer, WorkshopSerializer 
 from rest_framework import filters
 
 from .models import *
@@ -95,3 +95,9 @@ class ClubList(ListCreateAPIView):
     serializer_class = PopulatedClubSerializer
     filter_backends = [filters.SearchFilter, filters.OrderingFilter]
     search_fields = ['name', 'trainers__last_trained', 'trainers__name']
+
+
+class WorkshopNames(ListCreateAPIView):
+    queryset = Workshop.objects.all()
+    serializer_class = PopulatedWorkshopSerializer
+
