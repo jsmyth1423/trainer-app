@@ -2,7 +2,6 @@ asgiref==3.5.2
 certifi==2022.6.15.1
 distlib==0.3.6
 Django==4.1.1
-django-filter==22.1
 filelock==3.8.0
 pipenv==2022.9.8
 platformdirs==2.5.2
