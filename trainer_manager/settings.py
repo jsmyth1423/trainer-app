@@ -10,7 +10,15 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
+import os
 from pathlib import Path
+import django_on_heroku
+from dotenv import load_dotenv
+import dj_database_url
+load_dotenv()
+
+ENV = str(os.getenv('ENVIRONMENT', 'DEV'))
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,12 +28,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-s*q1l$p1%3edy3ihpno773t35m1&_lm)*z64qw#!hu51wg+!47'
-
+if ENV == 'DEV':    
+    SECRET_KEY = 'django-insecure-s*q1l$p1%3edy3ihpno773t35m1&_lm)*z64qw#!hu51wg+!47'
+else:
+    SECRET_KEY = str(os.getenv('SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = ENV == 'DEV'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -55,6 +65,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CORS_ALLOW_ALL_ORIGINS=True
+
 ROOT_URLCONF = 'trainer_manager.urls'
 
 TEMPLATES = [
@@ -79,12 +91,15 @@ WSGI_APPLICATION = 'trainer_manager.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
+DATABASES = {}
+if ENV != 'DEV':
+     DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)	
+else:
+     DATABASES['default'] =  {        
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-}
+
 
 
 # Password validation
@@ -128,8 +143,5 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:8000',
-    'http://localhost:8001',
-    'http://localhost:3000'
-]
+
+django_on_heroku.settings(locals())
