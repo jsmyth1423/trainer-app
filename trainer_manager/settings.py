@@ -101,7 +101,7 @@ else:
 
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': (
-        'rest_framework_filters.backends.DjangoFilterBackend', ...
+        'rest_framework_filters.backends.DjangoFilterBackend',
     ),
 }
 # Password validation
