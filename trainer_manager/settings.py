@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'django-filter',
     'corsheaders',
     'trainers',
     
@@ -100,8 +99,11 @@ else:
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 
-
-
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': (
+        'rest_framework_filters.backends.DjangoFilterBackend', ...
+    ),
+}
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
