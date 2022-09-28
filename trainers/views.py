@@ -1,7 +1,7 @@
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView # Generic classes for CRUD operations
 
 from trainers.serializers.common import PopulatedClubSerializer, PopulatedWorkshopSerializer, TrainerSerializer, PopulatedTrainerSerializer, Workshop_DetailsSerializer, WorkshopSerializer 
-import rest_framework_filters as filters
+from rest_framework import filters
 
 from .models import *
 # Create your views here.
